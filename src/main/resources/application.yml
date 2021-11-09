@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: file-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/file_upload?useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
